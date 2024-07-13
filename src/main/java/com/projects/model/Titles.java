@@ -1,6 +1,7 @@
 package com.projects.model;
 
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.Column;
@@ -8,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+
+@AllArgsConstructor
 @Setter
 @Getter
 @Entity
@@ -23,12 +26,7 @@ public class Titles {
 	@Column(name="DESCRIPTION_AR")
 	private String descriptionAR;
 	
-	
-	public Titles(String descriptionEN, String descriptionAR) {
-		super();
-		this.descriptionEN = descriptionEN;
-		this.descriptionAR = descriptionAR;
-	}
+
 
 
 

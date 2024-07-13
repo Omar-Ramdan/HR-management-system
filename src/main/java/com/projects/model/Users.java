@@ -1,6 +1,7 @@
 package com.projects.model;
 
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.Column;
@@ -13,6 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;  
 import java.security.NoSuchAlgorithmException;  
 
+@AllArgsConstructor
 @Setter
 @Getter
 @Entity
@@ -27,46 +29,8 @@ public class Users {
 	 @Column(name="PASSWORD")
 	private String password ;
 	
-
+    
 	
-	 public static byte[] getSHA(String input) throws      NoSuchAlgorithmException {  
-		 // The Static method " getInstance() " is called to initiate hashing with SHA  
-		        MessageDigest md = MessageDigest.getInstance("SHA-256");  
-		  
-		        // The static method called in the JAVA program  
-		        // for calculating the message digest of a given input  
-		        // and results in an array of byte  
-		        return md.digest(input.getBytes(StandardCharsets.UTF_8));  
-		    }
-	
-	    public static String toHexString(byte[] hash) {  
-	        // calling the " BigInteger " function in JAVA programming language.  
-	        BigInteger number = new BigInteger(1, hash);  
-	  
-	        // Converting the message digest into a Hexa decimal value.  
-	        StringBuilder hexString = new StringBuilder(number.toString(16));  
-	  
-	        while (hexString.length() < 64) {  
-	            hexString.insert(0, '0');  
-	        }  
-	  
-	        return hexString.toString();  
-	    }  
-	
-	
-	
-	
-	public Users(String userNmae, String password) {
-			super();
-			this.userNmae = userNmae;
-			try {
-				this.password =  toHexString(getSHA(password));
-			} catch (NoSuchAlgorithmException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-
 	
 	
 

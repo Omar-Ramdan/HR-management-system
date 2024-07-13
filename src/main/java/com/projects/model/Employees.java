@@ -1,6 +1,7 @@
 package com.projects.model;
 
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.Column;
@@ -12,6 +13,7 @@ import jakarta.persistence.Id;
 import java.math.BigDecimal;
 import java. util. Date;
 
+@AllArgsConstructor
 @Setter
 @Getter
 @Entity
@@ -51,26 +53,7 @@ public class Employees {
 	private int userId ;
 	 @Column(name="JOIN_DATE")
     private Date joinDate;
-	public Employees(String firstNameEN, String firstNameAR, String lastNameEN, String lastNameAR, int age,
-			String address, String phoneNamber, String email, BigDecimal salary, String jobDescrption, int managerId,
-			int titelId, int departmentId, int userId, Date joinDate) {
-		super();
-		this.firstNameEN = firstNameEN;
-		this.firstNameAR = firstNameAR;
-		this.lastNameEN = lastNameEN;
-		this.lastNameAR = lastNameAR;
-		this.age = age;
-		this.address = address;
-		this.phoneNamber = phoneNamber;
-		this.email = email;
-		this.salary = salary;
-		this.jobDescrption = jobDescrption;
-		this.managerId = managerId;
-		this.titelId = titelId;
-		this.departmentId = departmentId;
-		this.userId = userId;
-		this.joinDate = joinDate;
-	}
+	
     
     
 	

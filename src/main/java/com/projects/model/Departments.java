@@ -1,6 +1,7 @@
 package com.projects.model;
 
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.Column;
@@ -8,7 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+@AllArgsConstructor
 @Setter
 @Getter
 @Entity
@@ -23,11 +24,6 @@ private int id=0;
 private String descriptionEN;
 @Column(name="DESCRIPTION_AR")
 private String descriptionAR;
-public Departments(String descriptionEN, String descriptionAR) {
-	super();
-	this.descriptionEN = descriptionEN;
-	this.descriptionAR = descriptionAR;
-}
 
 
 
