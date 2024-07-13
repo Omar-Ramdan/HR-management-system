@@ -1,34 +1,30 @@
-package com.projects.DTO;
-
+package com.projects.dto;
 import java.math.BigDecimal;
-import java.util.Date;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @AllArgsConstructor
-@Setter
-@Getter
-public class createUserDto {
+@Data
+public class CreateUserRequestDto {
 	
 	private String userNmae ;
 	private String password ;
-	private String firstNameEN ;
-	private String firstNameAR ;
-	private String lastNameEN ;
-	private String lastNameAR ;
+	private String firstNameEn ;
+	private String firstNameAr ;
+	private String lastNameEn ;
+	private String lastNameAr ;
 	private int age ;
 	private String address ;
 	private String phoneNamber;
 	private String email ;
 	private BigDecimal salary ;
-	private String jobDescrption ;
+	private String jobDescription ;
 	private int managerId ;
 	private int titelId ;
 	private int departmentId ;
-	private int userId ;
-	private Date joinDate;
+	// private int userId ; what is this ?
+	private String joinDate;
 	
 
 }
